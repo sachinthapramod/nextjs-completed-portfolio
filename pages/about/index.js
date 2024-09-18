@@ -1,3 +1,4 @@
+import React, {useState} from 'react';
 // icons
 import {
   FaHtml5,
@@ -87,6 +88,10 @@ const aboutData = [
     ],
   },
 ];
+
+//components
+import Avatar from '../../components/Avatar';
+import Circles from '../../components/Circles';
 
 const About = () => {
   return <div>About</div>;
