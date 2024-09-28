@@ -80,8 +80,11 @@ const WorkSlider = () => {
                 {slide.images.map((image, index)=>{
                   return(
                     <div className='relative rounded-lg overflow-hidden flex 
-                    items-center justify-center group'>
-                      <div className='flex items-center justify-center relative overflow-hidden'>
+                    items-center justify-center group'
+                    key={index}
+                    >
+                      <div className='flex items-center justify-center relative 
+                      overflow-hidden group'>
                         {/* image */}
                         <img src={image.path} width={500} height={300} alt=''/> 
                         {/* overlay gradient */}
@@ -92,15 +95,21 @@ const WorkSlider = () => {
                         <div className='absolute bottom-0 translate-y-full 
                         group-hover:-translate-y-10 group-hover:xl:-translate-y-20
                         transition-all duration-300'>
-                          <div className='flex items-center gap-x-2'>
+                          <div className='flex items-center gap-x-2 text-[13px] tracking-[0.2em]'>
                             {/* title part 1 */}
-                            <div>    /////////////////////////////    2:18
-                              title part 1
+                            <div className='delay-100'>
+                             LIVE
                               </div>
                             {/* title part 2 */}
-                            <div>title part 2</div>
+                            <div className='translate-y-[500%] 
+                            group-hover:translate-y-0 transition-all duration-all duration-300 delay-150'>
+                              PROJECT
+                            </div>
                             {/* icon */}
-                            <div>icon</div>
+                            <div className='text-xl translate-y-[500%] 
+                            group-hover:translate-y-0 transition-all duration-300 
+                            delay-200'>
+                              <BsArrowRight/></div>
                           </div>
                         </div>
                       </div>
